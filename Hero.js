@@ -2,7 +2,6 @@ class Hero {
 	constructor(stats) {
 		this.name = stats.name;
 		this.xp = stats.xp;
-		console.log(stats);
 	}
 
 	gainXp(amount) {
@@ -11,8 +10,13 @@ class Hero {
 	}
 }
 
-const mango = new Hero({name: "mango", xp: 1000});
+class War extends Hero {
+	constructor({name = "Кратос", xp, weapon}) {
+		super({name, xp});
 
-mango.lastName = "emi";
+		this.weapon = weapon;
+	}
+}
 
+const mango = new War({xp: 1000, weapon: "Левіафан"});
 console.log(mango);
