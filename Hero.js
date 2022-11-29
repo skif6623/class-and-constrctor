@@ -16,7 +16,11 @@ class War extends Hero {
 
 		this.weapon = weapon;
 	}
+	attack() {
+		console.log(`${this.name} атакує Королеву валькірій за допомогою ${this.weapon}`);
+	}
 }
 
 const mango = new War({xp: 1000, weapon: "Левіафан"});
 console.log(mango);
+mango.attack();
